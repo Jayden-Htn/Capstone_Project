@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+    header {
+      background: #f0f0f0;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    button {
+      padding: 8px 16px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    embed {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button onclick="showPDF('Poster.pdf')">Poster</button>
+    <button onclick="showPDF('Report.pdf')">Report</button>
+  </header>
+
+  <embed id="pdfViewer" src="Poster.pdf" type="application/pdf">
+
+  <script>
+    function showPDF(pdfPath) {
+      document.getElementById('pdfViewer').src = pdfPath;
+    }
+  </script>
+</body>
+</html>
