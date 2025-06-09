@@ -9,19 +9,37 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      font-family: sans-serif;
     }
     header {
-      background: #f0f0f0;
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #ccc;
+      display: flex;
+      flex-direction: row;
+      height: 48px;
+      background: #e4e4e4;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 16px;
+      font-family: Tahoma, Geneva, sans-serif;
+      font-weight: 500;
+      padding: 0 40px 0 16px;
+      flex: 1 0 310px;
+      width: 100%;  
+      flex-wrap: nowrap;
+      box-sizing: border-box;
     }
     button {
-      padding: 8px 16px;
+      padding: 4px 8px;
       margin: 0 10px;
       font-size: 16px;
       cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid black;
+      justify-self: center;
+    }
+    .ws {
+      flex: 1 1 310px;
+      width: 100%;  
     }
     embed {
       flex: 1;
@@ -32,8 +50,10 @@
 </head>
 <body>
   <header>
+    <h1>Jayden Houghton Capstone Project</h1>
     <button onclick="showPDF('Poster.pdf')">Poster</button>
     <button onclick="showPDF('Report.pdf')">Report</button>
+    <div class="ws"></div>
   </header>
 
   <embed id="pdfViewer" src="Poster.pdf" type="application/pdf">
